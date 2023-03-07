@@ -7,7 +7,8 @@ WORKDIR /app
 COPY build.gradle settings.gradle gradlew /app/
 COPY gradle /app/gradle
 
-FROM gradle:jdk19-jammy
+# Download and install Gradle
+RUN ./gradlew --version
 
 # Copy the project files
 COPY . /app
