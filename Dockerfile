@@ -14,7 +14,7 @@ RUN ./gradlew --version
 COPY . /app
 
 # Build the project
-RUN ./gradlew build
+RUN ./gradlew build --scan
 
 # Set the startup command
 CMD ["java", "-jar", "build/libs/<your_jar_file_name>.jar"]
